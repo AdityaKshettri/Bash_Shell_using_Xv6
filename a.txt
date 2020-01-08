@@ -1,0 +1,21 @@
+bsh.c: In function ‘changeDirectory’:
+bsh.c:146:3: error: ignoring return value of ‘chdir’, declared with attribute warn_unused_result [-Werror=unused-result]
+   chdir(getenv("HOME"));
+   ^~~~~~~~~~~~~~~~~~~~~
+bsh.c: In function ‘pipeHandler’:
+bsh.c:365:4: error: ignoring return value of ‘pipe’, declared with attribute warn_unused_result [-Werror=unused-result]
+    pipe(filedes); // for odd i
+    ^~~~~~~~~~~~~
+bsh.c:367:4: error: ignoring return value of ‘pipe’, declared with attribute warn_unused_result [-Werror=unused-result]
+    pipe(filedes2); // for even i
+    ^~~~~~~~~~~~~~
+bsh.c: In function ‘commandHandler’:
+bsh.c:490:41: error: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Werror=unused-result]
+  else if (strcmp(args[0],"clear") == 0) system("clear");
+                                         ^~~~~~~~~~~~~~~
+bsh.c: In function ‘main’:
+bsh.c:614:3: error: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Werror=unused-result]
+   fgets(line, MAXLINE, stdin);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make: *** [bsh.o] Error 1
